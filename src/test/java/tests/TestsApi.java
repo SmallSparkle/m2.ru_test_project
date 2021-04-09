@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -7,6 +8,7 @@ import static io.restassured.RestAssured.given;
 public class TestsApi extends TestBase {
 
   @Test
+  @Tag("api")
   void searchApartmentApi() {
     given()
             .when()

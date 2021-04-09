@@ -37,6 +37,22 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+tasks.withType(Test) {
+    systemProperties += System.properties
+}
+
 test {
     useJUnitPlatform()
+}
+
+task web(type: Test) {
+    useJUnitPlatform {
+        excludeTags 'api'
+    }
+}
+
+task api_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'api'
+    }
 }
