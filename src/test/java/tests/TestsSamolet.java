@@ -21,7 +21,6 @@ class TestsSamolet extends TestBase {
   }
 
   @Test
-  @Disabled
   void openComplexPage() {
     String complex = getRandomResidentialComplex();
     step.openSamoletPage();
