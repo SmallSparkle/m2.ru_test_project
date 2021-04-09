@@ -1,8 +1,7 @@
 # Tests for m2.ru website
-#### UI
-#### API
 
 
+![video](src/test/resources/video/video_test.gif)
 ## Technology Stack
 **Java, Selenide, Rest-Assured, Junit5, Gradle, Allure Reports, Jenkins, Selenoid, Telegram Bot.**
 <br><br>
