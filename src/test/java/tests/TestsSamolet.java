@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.BaseStepsSamolet;
 
@@ -16,6 +17,7 @@ class TestsSamolet extends TestBase {
 
 
   @Test
+  @DisplayName("Переход на страницу застройщика \"Самолёт\"")
   void goToSamoletPage() {
     step.openBaseURL();
     step.goToSamoletPage();
@@ -24,6 +26,7 @@ class TestsSamolet extends TestBase {
   }
 
   @Test
+  @DisplayName("Переход на страниу Объекта")
   void openComplexPage() {
     String complex = getRandomResidentialComplex();
     step.openSamoletPage();

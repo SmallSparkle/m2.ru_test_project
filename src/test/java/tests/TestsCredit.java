@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.Feature;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.BaseStepsCredit;
 
@@ -9,6 +10,7 @@ class TestsCredit extends TestBase {
   private final BaseStepsCredit step = new BaseStepsCredit();
 
   @Test
+  @DisplayName("Переход на страницу \"Ипотека\"")
   void goToCreditPaige() {
     step.openBaseURL();
     step.goTeCreditPaige();
