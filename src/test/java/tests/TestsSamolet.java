@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import steps.BaseStepsSamolet;
@@ -8,6 +9,8 @@ import static utils.RandomUtils.getRandomResidentialComplex;
 
 //тесты flaky из за долгой загрузки страницы - видимо api застройщика тормозит
 //оставлены для отображения в Allure
+
+@Feature("Сатмолёт")
 class TestsSamolet extends TestBase {
   private final BaseStepsSamolet step = new BaseStepsSamolet();
 

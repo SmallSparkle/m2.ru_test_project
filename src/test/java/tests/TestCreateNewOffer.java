@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+@Feature("Оффер")
 class TestCreateNewOffer extends TestBase {
 
   @Test

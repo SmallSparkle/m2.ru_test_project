@@ -10,11 +10,10 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Condition.*;
 import static io.qameta.allure.Allure.step;
 
-
+@Feature("Оффер")
 class TestShowPhone extends TestBase {
 
   @Test
-  @Feature("Offer")
   @Story("Показать телефон")
   @DisplayName("Показать телефон продавца")
   void showPhone() {
