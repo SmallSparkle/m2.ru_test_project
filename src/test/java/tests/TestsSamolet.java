@@ -9,23 +9,9 @@ import steps.BaseStepsSamolet;
 
 import static utils.RandomUtils.getRandomResidentialComplex;
 
-//тесты flaky из за долгой загрузки страницы - видимо api застройщика тормозит
-//оставлены для отображения в Allure
-
 @Feature("Сатмолёт")
 class TestsSamolet extends TestBase {
   private final BaseStepsSamolet step = new BaseStepsSamolet();
-
-
-  @Test
-  @Tag("web")
-  @DisplayName("Переход на страницу застройщика \"Самолёт\"")
-  void goToSamoletPage() {
-    step.openBaseURL();
-    step.goToSamoletPage();
-    step.checkPage();
-    step.checkOffers();
-  }
 
   @Test
   @Tag("web")
@@ -37,7 +23,16 @@ class TestsSamolet extends TestBase {
     step.goToComplexPage();
     step.checkComplexPage(extractComplexName(complex));
 
+  }
 
+  @Test
+  @Tag("web")
+  @DisplayName("Переход на страницу застройщика \"Самолёт\"")
+  void goToSamoletPage() {
+    step.openBaseURL();
+    step.goToSamoletPage();
+    step.checkPage();
+    step.checkOffers();
   }
 
   private String extractComplexName(String complex)  {
