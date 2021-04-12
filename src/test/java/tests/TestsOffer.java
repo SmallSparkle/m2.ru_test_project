@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
@@ -13,11 +14,12 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Feature("Оффер")
-class TestCreateNewOffer extends TestBase {
+class TestsOffer extends TestBase {
 
   @Test
   @Feature("Offer")
   @Story("Создать новый Offer")
+  @Tag("web")
   @DisplayName("Создание нового Offer неавторизованным пользователем")
   void createOfferInHomePageNoLoginUser() {
     SelenideLogger.addListener("allure", new AllureSelenide());
@@ -31,6 +33,7 @@ class TestCreateNewOffer extends TestBase {
 
   @Test
   @Story("Показать телефон")
+  @Tag("web")
   @DisplayName("Показать телефон продавца")
   void showPhone() {
     step("Открываем страницу поисковой выдачи",
