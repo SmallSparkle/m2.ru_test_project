@@ -17,7 +17,6 @@ import static io.qameta.allure.Allure.step;
 class TestsOffer extends TestBase {
 
   @Test
-  @Feature("Offer")
   @Story("Создать новый Offer")
   @Tag("web")
   @DisplayName("Создание нового Offer неавторизованным пользователем")
