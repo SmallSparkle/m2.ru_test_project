@@ -1,16 +1,17 @@
-package tests;
+package tests.selenideOnly;
 
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-@Feature("Fail test for demo")
-class TestAlwaysFall extends TestBase{
+@Feature("Неработающий тест для отображения в отчёте")
+class TestFall extends TestBase {
 
   @Test
   @Tag("web")

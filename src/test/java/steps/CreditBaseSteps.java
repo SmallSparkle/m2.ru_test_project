@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class BaseStepsCredit {
+public class CreditBaseSteps {
 
   @Step("Открываем главную страницу")
   public void openBaseURL() {
@@ -16,7 +16,7 @@ public class BaseStepsCredit {
   }
 
   @Step("Выбираем в навбаре пункт \"Ипотека\"")
-  public void goTeCreditPaige() {
+  public void goTeCreditPage() {
     $(byText("Ипотека")).parent().click();
   }
 

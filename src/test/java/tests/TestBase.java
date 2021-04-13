@@ -16,8 +16,9 @@ public class TestBase {
 
   @BeforeAll
   static void setup() {
-    addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+    addListener("AllureSelenide", new AllureSelenide());
     Configuration.startMaximized = true;
+    Configuration.baseUrl = "https://m2.ru";
     if (System.getProperty("remote_driver") != null) {
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setCapability("enableVNC", true);
@@ -27,7 +28,6 @@ public class TestBase {
     }
     RestAssured.filters(new AllureRestAssured());
     RestAssured.baseURI = "https://m2.ru";
-    Configuration.baseUrl = "https://m2.ru";
   }
 
   @AfterEach
@@ -40,5 +40,5 @@ public class TestBase {
     }
     closeWebDriver();
   }
-  }
+}
 

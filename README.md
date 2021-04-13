@@ -1,36 +1,47 @@
-# Tests for m2.ru website
-
-
-![video](src/test/resources/video/video_test.gif)
+# Автотесты для [m2.ru](https://m2.ru/)
 ## Technology Stack
-**Java, Gradle, Junit5, Selenide, Rest-Assured, Allure Reports, Selenoid, Telegram Bot.**
+**Java, Gradle, Junit5, Selenide, Selenoid, Allure Reports, Allure TestOps, Telegram Bot.**
 <br><br>
+## Реализованы проверки:
+**в реадизации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах**
 
+- [X] - Переход на страницу "Ипотека" с главной страницы
+- [X] - Переход на страницу застройщика "Самолёт" с главной страницы
+- [X] - Создание оффера неавторизованным пользователем
+- [X] - Просмотр телефона продавца на карточке оффера
+- [X] - Поиск на главной странице - покупка квартиры
+- [X] - Поиск на главной странице - снять квартиру
+
+## Добавлено видео о прохождении тестов
+![video](images/video_test.gif)
+<br><br>
 ## Screenshots
-#### *Jenkins - it is an open source automation server:*
-![screenshot](src/test/resources/images/jenkins.png)
+#### *Для реализации протокола Selenium задействован Selenoid:*
+![screenshot](images/selenoid.png)
 <br />
 <br />
 <br />
-#### *Allure Report - it is a flexible lightweight test report tool:*
-![screenshot](src/test/resources/images/allure.png)
-![screenshot](src/test/resources/images/allure_test_resalts.png)
-![screenshot](src/test/resources/images/allure_atach.png)
+#### *В качестве CI системы использован Jenkins*
+![screenshot](images/jenkins.png)
 <br />
 <br />
 <br />
-#### *Allure TestOps - it is a TMS that allows to manage all test related stuff in one place:*
-![screenshot](src/test/resources/images/allure_TO_resalts.png)
-![screenshot](src/test/resources/images/allure_TO_cases.png)
-![screenshot](src/test/resources/images/allure_TO_manual_vs_auto.png)
-![screenshot](src/test/resources/images/allure_TO_jenkins.png)
+#### *Для построения отчетов подклюсен Allure Report:*
+![screenshot](images/allure.png)
+![screenshot](images/allure_test_resalts.png)
+![screenshot](images/allure_atach.png)
 <br />
 <br />
 <br />
-#### *Telegram notifications:*
-![screenshot](src/test/resources/images/telegram_notif.png)
+#### *В качестве системы Тест Менеджмента использован Allure TestOps:*
+![screenshot](images/allure_TO_resalts.png)
+![screenshot](images/allure_TO_cases.png)
+![screenshot](images/allure_TO_code.png)
+![screenshot](images/allure_TO_manual_vs_auto.png)
+![screenshot](images/allure_TO_jenkins.png)
 <br />
 <br />
 <br />
-#### *Selenoid - a lightning fast Selenium protocol implementation running browsers in Docker containers:*
-![screenshot](src/test/resources/images/selenoid.png)
+#### *Настроено уведомление в Telegram:*
+![screenshot](images/telegram_notif.png)
+
