@@ -3,7 +3,7 @@
 **Java, Gradle, Junit5, Selenide, Selenoid, Allure Reports, Allure TestOps, Telegram Bot.**
 <br><br>
 ## Реализованы проверки:
-**в реадизации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах**
+**в реализации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах**
 
 - [X] - Переход на страницу "Ипотека" с главной страницы
 - [X] - Переход на страницу застройщика "Самолёт" с главной страницы
@@ -26,9 +26,9 @@
 <br />
 <br />
 <br />
-#### *Для построения отчетов подклюсен Allure Report:*
+#### *Для построения отчетов подключен Allure Report:*
 ![screenshot](images/allure.png)
-![screenshot](images/allure_test_resalts.png)
+![screenshot](images/allure_tests.png)
 ![screenshot](images/allure_atach.png)
 <br />
 <br />
