@@ -1,9 +1,11 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import config.EnvironmentConfig;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -16,6 +18,7 @@ public class TestBase {
 
   @BeforeAll
   static void setup() {
+    final EnvironmentConfig config = ConfigFactory.create(EnvironmentConfig.class, System.getProperties());
     addListener("AllureSelenide", new AllureSelenide());
     Configuration.startMaximized = true;
     Configuration.baseUrl = "https://m2.ru";
@@ -26,7 +29,6 @@ public class TestBase {
       Configuration.browserCapabilities = capabilities;
       Configuration.remote = System.getProperty("remote_driver");
     }
-    RestAssured.filters(new AllureRestAssured());
     RestAssured.baseURI = "https://m2.ru";
   }
 

@@ -10,7 +10,9 @@ repositories {
 
 def allureVersion = "2.13.8",
     selenideVersion = "5.19.0",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    ownerVersion = "1.0.12"
+
 
 allure {
     version = "$allureVersion"
@@ -31,7 +33,8 @@ dependencies {
             "io.rest-assured:rest-assured:4.3.1",
             "io.qameta.allure:allure-java-commons:$allureVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.aeonbits.owner:owner:$ownerVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
@@ -47,11 +50,11 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 }
 
 task web(type: Test) {
     useJUnitPlatform {
     }
-
 }
 
