@@ -43,18 +43,16 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    systemProperties += System.properties
+    systemProperties(System.getProperties())
     System.setProperty("junit.jupiter.extensions.autodetection.enabled", "true")
 
 }
 
 test {
     useJUnitPlatform()
-    systemProperties(System.getProperties())
 }
 
 task web(type: Test) {
-    useJUnitPlatform {
-    }
+    useJUnitPlatform {}
 }
 

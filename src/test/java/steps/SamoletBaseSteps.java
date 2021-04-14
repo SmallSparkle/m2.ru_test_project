@@ -1,5 +1,6 @@
 package steps;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
@@ -30,7 +31,8 @@ public class SamoletBaseSteps extends TestBase {
   @Step("Проверяем что на страница застройщика \"Самолет\" размещены объекты")
   public void checkSamoletDevelopersOffers(int minimalCountOffers) {
     //кол-во объкетов на стр. можно брать из базы или из требований
-    Assertions.assertTrue($$(".SamoletSerp__item").size() >= minimalCountOffers);
+    $$(".SamoletSerp__item")
+            .shouldHave(CollectionCondition.sizeGreaterThanOrEqual(minimalCountOffers));
   }
 
 }
