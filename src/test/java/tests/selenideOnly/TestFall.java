@@ -1,5 +1,7 @@
 package tests.selenideOnly;
 
+import allure.JiraIssue;
+import allure.JiraIssues;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -15,6 +17,7 @@ class TestFall extends TestBase {
 
   @Test
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Падающий тест для отрисовки отчёта")
   void alwaysFallFeature() {
     open("/favorites");

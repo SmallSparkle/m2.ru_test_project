@@ -1,15 +1,16 @@
 package tests.steps;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
+import allure.JiraIssue;
+import allure.JiraIssues;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
@@ -20,6 +21,7 @@ class TestsOffer extends TestBase {
   @Test
   @Story("Создать новый Offer")
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Создание нового Offer неавторизованным пользователем")
   void createOfferInHomePageNoLoginUser() {
     step("Открываем главную страницу", () -> {
@@ -38,6 +40,7 @@ class TestsOffer extends TestBase {
   @Test
   @Story("Показать телефон")
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Показать телефон продавца")
   void showPhone() {
     step("Открываем страницу поисковой выдачи", () -> {

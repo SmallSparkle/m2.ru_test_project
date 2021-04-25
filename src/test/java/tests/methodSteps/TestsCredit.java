@@ -1,5 +1,7 @@
 package tests.methodSteps;
 
+import allure.JiraIssue;
+import allure.JiraIssues;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,6 +15,7 @@ class TestsCredit extends TestBase {
 
   @Test
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Переход на страницу \"Ипотека\"")
   void goToCreditPage() {
     step.openBaseURL();

@@ -1,5 +1,7 @@
 package tests.steps;
 
+import allure.JiraIssue;
+import allure.JiraIssues;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
@@ -18,6 +20,7 @@ class TestsSearchTabsPanel extends TestBase {
 
   @Test
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Поиск на главной странице - покупка квартиры")
   void searchApartmentForBuy() {
     step("Открыть главную страницу", () -> {
@@ -48,6 +51,7 @@ class TestsSearchTabsPanel extends TestBase {
   @Test
   @AllureId("2257")
   @Tag("web")
+  @JiraIssues({@JiraIssue("QC3-25")})
   @DisplayName("Поиск на главной странице - снять квартиру")
   void searchApartmentForRent() {
     step("Открыть главную страницу", () ->
