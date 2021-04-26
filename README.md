@@ -1,6 +1,6 @@
 # Автотесты для [m2.ru](https://m2.ru/)
 ## Technology Stack
-**Java, Gradle, Junit5, Selenide, Selenoid, Allure Reports, Allure TestOps, Telegram Bot.**
+**Java, Gradle, Junit5, Selenide, Selenoid, Allure Reports, Allure TestOps, Jira, Telegram Bot.**
 <br><br>
 ## Реализованы проверки:
 **в реализации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах**
@@ -11,7 +11,6 @@
 - [X] - Просмотр телефона продавца на карточке оффера
 - [X] - Поиск на главной странице - покупка квартиры
 - [X] - Поиск на главной странице - снять квартиру
-
 ## Добавлено видео о прохождении тестов
 ![video](images/video_test.gif)
 <br><br>
@@ -39,6 +38,11 @@
 ![screenshot](images/allure_TO_code.png)
 ![screenshot](images/allure_TO_manual_vs_auto.png)
 ![screenshot](images/allure_TO_jenkins.png)
+<br />
+<br />
+<br />
+#### *Настроена интеграция с Jira:*
+![screenshot](images/jira.png)
 <br />
 <br />
 <br />
