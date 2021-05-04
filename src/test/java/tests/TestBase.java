@@ -16,31 +16,31 @@ import static helpers.AttachmentsHelper.*;
 
 public class TestBase {
 
-  @BeforeAll
-  static void setup() {
-    final EnvironmentConfig config = ConfigFactory.create(EnvironmentConfig.class, System.getProperties());
-    addListener("AllureSelenide", new AllureSelenide());
-    Configuration.startMaximized = true;
-    Configuration.baseUrl = "https://m2.ru";
-    if (System.getProperty("remote_driver") != null) {
-      DesiredCapabilities capabilities = new DesiredCapabilities();
-      capabilities.setCapability("enableVNC", true);
-      capabilities.setCapability("enableVideo", true);
-      Configuration.browserCapabilities = capabilities;
-      Configuration.remote = System.getProperty("remote_driver");
-    }
-    RestAssured.baseURI = "https://m2.ru";
-  }
+    @BeforeAll
+    static void setup() {
+        final EnvironmentConfig config = ConfigFactory.create(EnvironmentConfig.class, System.getProperties());
+        addListener("AllureSelenide", new AllureSelenide());
+        Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://m2.ru";
 
-  @AfterEach
-  public void afterEach() {
-    attachScreenshot("Last screenshot");
-    attachPageSource();
-    attachAsText("Browser console logs", getConsoleLogs());
-    if (System.getProperty("video_storage") != null) {
-      attachVideo();
+        if (System.getProperty("remote_driver") != null) {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVideo", true);
+            Configuration.browserCapabilities = capabilities;
+            Configuration.remote = System.getProperty("remote_driver");
+        }
+        RestAssured.baseURI = "https://m2.ru";
     }
-    closeWebDriver();
-  }
+
+    @AfterEach
+    public void afterEach() {
+        attachScreenshot("Last screenshot");
+        attachPageSource();
+        attachAsText("Browser console logs", getConsoleLogs());
+        if (System.getProperty("video_storage") != null) {
+            attachVideo();
+        }
+        closeWebDriver();
+    }
 }
-

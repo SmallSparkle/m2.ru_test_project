@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Feature("Неработающий тест для отображения в отчёте")
-class TestFall extends TestBase {
+class TestFalling extends TestBase {
 
   @Test
   @Tag("web")
